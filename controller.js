@@ -11,7 +11,7 @@ module.exports = class MouseController {
     }
 
     start() {
-        this.interval = setInterval(() => this.moveMouse(), 2000);
+        this.interval = setInterval(() => this.moveMouse(), 5000);
     }
 
     stop() {
