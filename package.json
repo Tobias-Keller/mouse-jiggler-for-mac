@@ -1,0 +1,53 @@
+{
+  "name": "mj-mac",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Tobias Keller",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "@hurdlegroup/robotjs": "^0.11.7"
+  },
+  "build": {
+    "appId": "com.tobiaskeller.app",
+    "icon": "icon.png",
+    "directories": {
+      "output": "build"
+    },
+    "productName": "MJ for Mac",
+    "mac": {
+      "target": ["dmg"],
+      "identity": null
+    },
+    "dmg": {
+      "iconSize": 75,
+      "window": {
+        "width": 544,
+        "height": 408
+      },
+
+      "contents": [
+        {
+          "x": 450,
+          "y": 280
+        },
+        {
+          "x": 450,
+          "y": 170,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+}
